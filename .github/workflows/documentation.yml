@@ -1,0 +1,26 @@
+name: Documentation
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/**.yml"
+      - "**.tf*"
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Render terraform docs and push changes back to PR
+        uses: terraform-docs/gh-actions@main
+        with:
+          working-dir: .
+          git-push: "true"
+          git-commit-message: "Updates Documentation"
