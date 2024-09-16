@@ -9,7 +9,7 @@ A template repository for managing infrastructure with Terraform.
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1, < 2 |
 | <a name="requirement_azuread"></a> [azuread](#requirement\_azuread) | >= 2, < 3 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 3, < 4 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 3, < 5 |
 
 ## Providers
 
